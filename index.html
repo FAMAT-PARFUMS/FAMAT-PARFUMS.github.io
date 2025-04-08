@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes</title>
+    <style>
+      .volver-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #800000; /* Bordó oscuro */
+    color: white;
+    padding: 10px 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.volver-arriba:hover {
+    background-color: #a52a2a; /* Rojo ladrillo */
+    transform: scale(1.1);
+}
+
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #444;
+            padding: 0px 0; /* Aumentar el padding superior e inferior */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centrar contenido dentro del header */
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 0; /* Eliminar margen inferior del logo */
+        }
+        nav {
+            background-color: #222;
+            padding: 15px 0; /* Aumentar el padding superior e inferior de la navegación */
+            text-align: center; /* Centrar la navegación */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block; /* Para centrar la lista horizontalmente */
+        }
+        nav ul li {
+            display: inline; /* Mostrar los elementos de la lista en línea */
+            margin: 0 25px; /* Aumentar el margen entre los elementos de la navegación */
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .catalogo-titulo {
+            text-align: center; /* Centrar el título Catálogo */
+            font-size: 20px; /* O el tamaño que prefieras */
+            margin-top: 10px; /* Espacio superior */
+            margin-bottom: 15px; /* Espacio inferior */
+        }
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .producto {
+            background: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+<style type="text/css">
+.grande { font-size: 60px; }
+.catalogo-titulo {
+    text-align: center; /* Centrar el título */
+    font-size: 34px; /* Aumentar el tamaño */
+    font-weight: bold; /* Hacerlo en negrita */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+.logo {
+    color: black;
+    font-size: 40px; /* Cambia este valor al tamaño que desees */
+    font-weight: bold;
+    margin-bottom: 0;
+}
+header {
+    background-color: linen; /* Cambia el color del header a rojo */
+}
+
+footer {
+    background-color: burlywood; /* Cambia el color del footer a negro */
+    color: white; /* Asegura que el texto sea visible en negro */
+}
+.producto:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+
+}
+.catalogo {
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.producto {
+    margin: 10px; /* Espaciado entre productos */
+}
+body {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF5EE; /* Seashell - Crema suave con toque rosado */
+    color: #333; /* Un gris oscuro para el texto */
+    line-height: 1.7;
+}
+.logo {
+    color: #800000; /* Bordo oscuro */
+    font-size: 36px; /* O el tamaño que tengas */
+    font-weight: bold;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sutil sombra */
+}
+@media screen and (max-width: 600px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en celular */
+        gap: 10px; /* Espaciado entre productos */
+    }
+
+    .producto {
+        margin: 5px; /* Menos margen en pantallas chicas */
+    }
+
+    .catalogo-titulo {
+        font-size: 24px; /* Hacer título más chico en celular */
+    }
+
+    .logo {
+        font-size: 28px; /* Ajustar tamaño del logo */
+    }
+}
+
+</style>
+<script>
+
+</script>
+</head>
+  <body id="top">
+  <a href="#top" class="volver-arriba" title="Volver arriba">↑</a>
+
+    <header>
+        <div class="logo">Le Nos Parfums</div>
+        <nav>
+            <ul>
+                <li><a href="#perfumes-disenador">Diseñador</a></li>
+                <li><a href="#perfumes-arabes">Árabes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="catalogo-titulo">Catálogo </div>
+    <section id="catalogo" class="catalogo">
+    </section>
+    
+    <section id="Diseñador" class="catalogo">
+        <h2 id="perfumes-disenador">Perfumes de Diseñador</h2>
+
+        <div class="producto"><img src="https://www.perfumeriabasic.com/cdn/shop/files/ErosEDP_2.png?v=1708642997&amp;width=1445" alt="Invictus Victory EdP"><p>Versace Eros EDP 100ml <strong>$173.000</strong> </p></div>
+        <div class="producto"><img src="https://www.perfumerianormy.com.ar/wp-content/uploads/2019/05/VersaceErosFlame.jpg" alt="Perfume 2"><p>Versace Eros Flame EDP 100ml <strong>$197.000</strong>
+        </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_753469-MLA48265216867_112021-C.jpg" alt="Perfume 13"><p> Dior Sauvage Parfum 100ml <strong>$243.000</strong></p></div>
+      <div class="producto"><img src="https://http2.mlstatic.com/D_995012-MLA69461117095_052023-C.jpg" alt="Perfume 13"><p> Invictus Victory Elixir Edp 100ml <strong>$199.000</strong></p></div>
+      <div class="producto"><img src="https://farmaciasdelpueblo.vtexassets.com/arquivos/ids/157042/Imagen.jpg?v=638533080730770000" alt="Perfume 13"><p> Invictus Victory Edt 100ml <strong>$140.000</strong></p></div>
+        <div class="producto"><img src="https://juleriaque.vtexassets.com/arquivos/ids/235730/1006156-01.jpg?v=638575166846930000" alt="Perfume 3"><p>Azzaro The Most Wanted EDT 100ml <strong>$139.000</strong></p></div>
+      <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_634819-MLA47146632226_082021-O.webp" alt="Perfume 3"><p>Azzaro The Most Wanted Intense EDP 100ml <strong>$191.000</strong></p></div>
+        <div class="producto"><img src="https://rougeb2car.vtexassets.com/arquivos/ids/200668-800-auto?v=638239900850630000&amp;width=800&amp;height=auto&amp;aspect=true" alt="Perfume 4"><p>Nautica Voyage <strong>$39.900</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/001/165/255/products/jean-paul-gaultier-scandal-edt-x50ml-9b7172bf1a2ea421ce17177702651240-640-0.jpg" alt="Perfume 5"><p>JPG Scandal EDT 100ml <strong>$179.000</strong></p></div>
+        <div class="producto"><img src="https://simplicityar.vtexassets.com/arquivos/ids/178966/239220_edp-jean-paul-gaultier-le-male-elixir-x-125-ml_imagen-2.jpg?v=638487917874570000" alt="Perfume 6"><p>JPG Le Male Elixir 125ml <strong>$183.000</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_994292-MLU76280637259_052024-O.webp" alt="Perfume 7"><p>JPG Scandal Absolu 100ml <strong>$193.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/002/708/808/products/arabe-38-5f26fcfb95af49202817279093116040-1024-1024.png" alt="Perfume 14"><p>Erba Pura Xerjoff 100ml <strong>$393.000</strong></p></div>
+        <div class="producto"><img src="https://juleriaque.vtexassets.com/arquivos/ids/216744/1002409_02.jpg?v=638203642900900000" alt="Perfume 8"><p>Calvin Klein One 125ml <strong>$71.000</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/bharara-king-5a72dfac1c39beee3017271340007847-640-0.webp" alt="Perfume 9"><p>Bharara King EDP 100ml <strong>$98.000</strong></p></div>
+        <div class="producto"><img src="https://juleriaque.vtexassets.com/arquivos/ids/210206-800-800?v=638779865777070000&amp;width=800&amp;height=800&amp;aspect=true" alt="Perfume 10"><p>Dior Sauvage EDT 100ml <strong>$179.000</strong></p></div>
+<div class="producto"><img src="https://http2.mlstatic.com/D_Q_NP_951207-MLA50485607587_062022-O.webp" alt="Perfume 10"><p>Stronger WIth&nbsp;you&nbsp;Intensely 100ml <strong>$245.000</strong></p></div>
+        <div class="producto"><img src="https://www.contimarket.com/assets/images/thumbs/650a07ed99466d31371a6b10_perfume-christian-dior-homme-sport-edt-masculino-125ml.jpeg" alt="Perfume 12"><p>Dior Homme Sport 100ml <strong>$195.000</strong></p></div>
+        <div class="producto"><img src="https://dior.vtexassets.com/arquivos/ids/1723754/dior_c099600755_cst14_1.jpg?v=638225401479200000" alt="Perfume 14"><p>Dior Sauvage Elixir <strong>$340.000</strong></p></div>
+      <div class="producto"><img src="https://http2.mlstatic.com/D_Q_NP_976103-MLU74223979876_022024-O.webp" alt="Perfume 14"><p>Valentino Uomo Born in Roma Intense 100ml <strong>$249.000</strong></p></div>
+
+
+    </section>
+    <section id="Arabes" class="catalogo">
+    <h2 id="perfumes-arabes">Perfumes Árabes</h2>
+      <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_663157-MLA78587250790_082024-O.webp" alt="Perfume 19"><p>Khamrah Lattafa 100ml <strong>$49.500</strong></p></div>
+      <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/khamrah-qahwa-57549deec361f8dbf117142437887729-1024-1024.jpeg" alt="Perfume 18"><p>Khamrah Qahwa Lattafa 100ml <strong>$51.500</strong></p></div>
+      <div class="producto"><img src="https://cdn.wholesale55.com/wp-content/uploads/2024/10/Hawas-Eau-de-Parfum-100-ml3.4-Fl-.oz-Para-Mujer-de-Rasasi.jpeg" alt="Perfume 16"><p>Hawas for Her Rasasi 100ml <strong>$83.000</strong></p></div>
+      <div class="producto"><img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155852-b-hawas-men-edp-100ml.jpg" alt="Perfume 16"><p>Hawas for Him Rasasi 100ml <strong>$74.500</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_834712-MLM54235038944_032023-O.webp" alt="Perfume 16"><p>Ajwad Lattafa 60ml <strong>$43.000</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/ajwad-pink-to-pink-6e499087ab8e0b979417127042480832-1024-1024.webp" alt="Perfume 17"><p>Ajwad Pink to Pink Lattafa 60ml <strong>$47.000</strong></p></div>
+        <div class="producto"><img src="https://perfumeshop.com.ar/wp-content/uploads/2024/10/lattafa-ansaam-gold-2.webp" alt="Perfume 18"><p>Ansaam Gold Lattafa 100ml <strong>$53.000</strong></p></div>
+      <div class="producto"><img src="https://dcdn-us.mitiendanube.com/stores/001/293/843/products/afnan-9pm-edp_01-bf750990aa2d827d10169768778951521-3ef3f65c7601281f7b16976878621463-1024-1024.jpg" alt="Perfume 19"><p>9PM Afnan 100ml <strong>$59.900</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_717181-MLA69563775565_052023-O.webp" alt="Perfume 19"><p>Asad Lattafa 100ml <strong>$49.000</strong></p></div>
+      <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_756228-MLA82409078906_022025-O.webp" alt="Perfume 19"><p>Asad Bourbon Lattafa 100ml <strong>$65.000</strong></p></div>
+        <div class="producto"><img src="https://perfumeshop.com.ar/wp-content/uploads/2024/09/Lattafa-ansaam-silver-2-1.webp" alt="Perfume 20"><p>Ansaam Silver Lattafa 100ml <strong>$67.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_724800-MLU72753843962_112023-O.webp" alt="Perfume 17"><p>Badee Al Oud Lattafa 100ml <strong>$45.500</strong></p></div>
+        <div class="producto"><img src="https://dubaiesencias.com/cdn/shop/files/1F796223-8750-48BE-93D5-B35AF76C3B22.jpg?v=1732791514&amp;width=1445" alt="Perfume 18"><p>Brioche Vanille Lattafa 100ml <strong>$93.000</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/fakhar-extrait-3b20c11886bff04e6417127070122418-480-0.webp" alt="Perfume 19"><p>Fakhar Extrait Lattafa 100ml <strong>$48.500</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/fakhar-femme-2540dbde970698f72f17142414764249-640-0.webp" alt="Perfume 20"><p>Fakhar Rose Lattafa 100ml <strong>$49.500</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_951004-MLU70951875998_082023-O.webp" alt="Perfume 18"><p>Musamam Lattafa 100ml <strong>$59.000</strong></p></div>
+        <div class="producto"><img src="https://perfumescardales.com.ar/wp-content/uploads/2023/10/Perfumes-Decants-7.jpg" alt="Perfume 19"><p>Oud Mood Lattafa 100ml <strong>$54.000</strong></p></div>
+      <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_686948-MLA83519842645_042025-O.webp" alt="Perfume 19"><p>Pisa Lattafa 100ml <strong>$98.000</strong></p></div>
+        <div class="producto"><img src="https://dcdn-us.mitiendanube.com/stores/002/348/405/products/photoroom-20241120_093528-d91abb822312f6b44817321068057192-640-0.jpg" alt="Perfume 20"><p>Gharam Pride Lattafa 100ml <strong>$65.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/403/862/products/tharwah-gold-d2eafb1a17d95bdfb217235767357912-640-0.jpg" alt="Perfume 20"><p>Tharwah Gold Lattafa 100ml <strong>$67.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_636072-MLU74337621717_022024-O.webp" alt="Perfume 17"><p>Sakeena Lattafa 100ml <strong>$50.000</strong></p></div>
+      <div class="producto"><img src="https://intense.com.ua/image/cache/catalog/antoniopuig/245536957_images_19764836041-1000x1340.jpg" alt="Perfume 17"><p>Club De Nuit Urban Man Armaf 100ml <strong>$58.000</strong></p></div>
+    <div class="producto"><img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155508-b-sehr-lattafa-edp-100ml.jpg" alt="Perfume 20"><p>Sehr Lattafa 100ml <strong>$61.000</strong> </p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_804288-MLU74532459088_022024-O.webp" alt="Perfume 18"><p>Teriaq Lattafa 100ml <strong>$63.000</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/teriaq-intense-a9c1b557503853ae8817344622200518-640-0.jpg" alt="Perfume 19"><p>Teriaq Intense Lattafa 100ml <strong>$76.000</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_640261-MLU75151471585_032024-O.webp" alt="Perfume 20"><p>Yara Moi Lattafa 100ml <strong>$48.500</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/002/708/808/products/arabe-5-c1c7cdfbd2484a437917306444058852-1024-1024.png" alt="Perfume 20"><p> Yara Pink Lattafa 100ml <strong>$49.500</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_631657-MLU75597051920_042024-O.webp" alt="Perfume 17"><p>Yara Tous Lattafa 100ml <strong>$48.500</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_856969-MLU76407104647_052024-O.webp" alt="Perfume 18"><p>Asad Zanzibar Lattafa 100ml <strong>$40.000</strong></p></div>
+        <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/honor-glory-3b56cb464b7d098f8917136148542205-640-0.webp" alt="Perfume 20"><p>Honor &amp; Glory Lattafa 100ml <strong>$55.000</strong></p></div>
+    <div class="producto"><img src="https://cdn.v2.tiendanegocio.com/gallery/22278/img_22278_18f1167edd9.jpeg" alt="Perfume 18"><p>Fakhar Lattafa 100ml <strong>$44.500</strong> </p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/yara-candy-29f6bbc62514bdbf1717284036084159-1024-1024.jpg" alt="Perfume 17"><p>Yara Candy Lattafa 100ml <strong>$47.500</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/qaed-al-fursan-4676afa6d8a72bb1de17136155965244-1024-1024.webp" alt="Perfume 18"><p>Qaed Al Fursan Lattafa 100ml <strong>$45.000</strong>  </p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_621585-MLU54978398824_042023-O.webp" alt="Perfume 19"><p>Nebras Lattafa 100ml <strong>$55.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_Q_NP_978280-MLA69569955955_052023-O.webp" alt="Perfume 17"><p>Shaheen Gold Lattafa 100ml <strong>$54.500</strong></p></div>
+        <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_837396-MLU69500988247_052023-O.webp" alt="Perfume 18"><p>Confidential Gold Lattafa 100ml <strong>$49.000</strong> </p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/002/708/808/products/arabe-24-e5fc0003851b86fd2017213950785726-1024-1024.png" alt="Perfume 18"><p>Maahir Black Lattafa 100ml <strong>$53.000</strong> </p></div>
+    <div class="producto"><img src="https://m.media-amazon.com/images/I/51iHK1QB+xL._SL1000_.jpg" alt="Perfume 18"><p>Asdaaf Ameer Lattafa 100ml <strong>$49.500</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_854522-MLU76885472895_062024-O.webp" alt="Perfume 18"><p>Eclaire Lattafa 100ml <strong>$59.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_Q_NP_912355-MLA79660276657_092024-O.webp" alt="Perfume 18"><p>Her Confession Lattafa 100ml <strong>$63.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/his-cofession-2e1722c43817b62fc917364428803960-1024-1024.webp" alt="Perfume 18"><p>His Confession Lattafa 100ml <strong>$69.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/masa-23043296a783ea4efd17136143372907-1024-1024.jpg" alt="Perfume 18"><p>Masa Lattafa 100ml <strong>$77.000</strong> </p></div>
+    <div class="producto"><img src="https://m.media-amazon.com/images/I/61TU3vGSRzL.jpg" alt="Perfume 18"><p>La Collection Bike Lattafa 100ml <strong>$72.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_787841-MLA79966518083_102024-O.webp" alt="Perfume 18"><p>La Collection Watch Lattafa 100ml <strong>$72.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_984255-MLA79550391295_092024-O.webp" alt="Perfume 18"><p>The Kingdom Man Lattafa 100ml <strong>$67.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_864921-MLU78364974069_082024-O.webp" alt="Perfume 18"><p>The Kingdom Woman Lattafa 100ml <strong>$51.500</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_790316-MLU71748299827_092023-O.webp" alt="Perfume 18"><p>Qimmah for Women Lattafa 100ml <strong>$52.500</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_974685-MLU74971100702_032024-O.webp" alt="Perfume 18"><p>Ishq Al Shuyukh Gold Lattafa 100ml <strong>$57.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_999380-MLU54974250975_042023-O.webp" alt="Perfume 18"><p>Ishq Al Shuyukh Silver Lattafa 100ml <strong>$61.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/hayaati-c6426e81b3e9f6bd3b17101000099209-640-0.webp" alt="Perfume 18"><p>Hayaati Lattafa 100ml <strong>$46.000</strong></p></div>
+    <div class="producto"><img src="https://silkperfumes.cl/cdn/shop/products/lattafa-hayaati-gold-elixier-edp-100ml.jpg?v=1708708176" alt="Perfume 18"><p>Hayaati Gold Lattafa 100ml <strong>$44.500</strong></p></div>
+    <div class="producto"><img src="https://perfugroupar.vtexassets.com/arquivos/ids/213490-800-auto?v=638696088411470000&amp;width=800&amp;height=auto&amp;aspect=true" alt="Perfume 18"><p>Ra'ed Luxe Lattafa 100ml <strong>$52.000</strong> </p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/9am-drive-788d5e15c05e0068ea17111979244089-1024-1024.jpeg" alt="Perfume 18"><p>9AM Dive Afnan 100ml <strong>$63.000</strong></p></div>
+    <div class="producto"><img src="https://perfumescardales.com.ar/wp-content/uploads/2023/02/Fotos-pagina.pptx-54.jpg" alt="Perfume 18"><p>9AM Branco Afnan 100ml <strong>$58.500</strong> </p></div>
+    <div class="producto"><img src="https://nextcell.com.ar/wp-content/uploads/2024/12/afnan-52950912336242.webp" alt="Perfume 18"><p>Historic Olmeda Afnan 100ml <strong>$72.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_Q_NP_925343-MLU69221228259_052023-O.webp" alt="Perfume 18"><p>Supremacy Gold Afnan 100ml <strong>$59.500</strong></p></div>
+    <div class="producto"><img src="https://cdn1.hendyla.com/pix/publicaciones/2024/11/19/a77e9c597fb7d7fc0f51cd6bb119db415e2907fe.jpg" alt="Perfume 18"><p>Supremacy Noir Afnan 100ml <strong>$65.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/supremacy-noy-only-b3afa90d3e3599278717100757999255-1024-1024.webp" alt="Perfume 18"><p>Supremacy Not Only Afnan 100ml <strong>$96.000</strong> </p></div>
+    <div class="producto"><img src="https://cdn.shopify.com/s/files/1/0008/4285/8551/files/supremacy150ml_1.jpg" alt="Perfume 18"><p>Supremacy Silver Afnan 100ml <strong>$63.500</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_982862-MLU73784211216_012024-O.webp" alt="Perfume 18"><p>Turathi Blue Afnan 90ml <strong>$64.500</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_Q_NP_879322-MLU71642686547_092023-O.webp" alt="Perfume 18"><p>9pm pour Femme Afnan 100ml <strong>$67.000</strong> </p></div>
+    <div class="producto"><img src="https://cdn.youcan.shop/stores/03b0f4405a9506f926ef4f8ecabbce7a/products/iyxuAj2cglBT8NgeZ2uPxgyhgclNSXMgzTCVKJjL_md.jpeg" alt="Perfume 18"><p>Rare Passion Afnan 100ml <strong>$67.000</strong> </p></div>
+        <div class="producto"><img src="https://perfumescardales.com.ar/wp-content/uploads/2024/01/Fotos-pagina.pptx-4.jpg" alt="Perfume 18"><p>Club de Nuit Iconic Armaf 105ml <strong>$77.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_796249-MLA82733531322_032025-O.webp" alt="Perfume 18"><p>Club de Nuit Intense Armaf 100ml <strong>$57.700</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_784445-MLA70661080379_072023-O.webp" alt="Perfume 18"><p>Club de Nuit Milestone Armaf 100ml <strong>$56.500</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/club-de-nuit-untold-a3b68af47c4673caa917148717298379-1024-1024.webp" alt="Perfume 18"><p>Club de Nuit Untold Armaf 100ml <strong>$81.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_716302-MLA52223329791_102022-O.webp" alt="Perfume 18"><p>Club de Nuit Woman Armaf 100ml <strong>$57.000</strong></p></div>
+    <div class="producto"><img src="https://cdn.valmara.co/56762-medium_default/odyssey-white-de-armaf-200-ml-hombre-edp.webp" alt="Perfume 18"><p>Odyssey Homme White Armaf 100ml <strong>$79.500</strong> </p></div>
+    <div class="producto"><img src="https://www.zafiroperfumeria.com/wp-content/uploads/2024/11/Odyssey-Spectra-Armaf.png" alt="Perfume 18"><p>Odyssey Spectra Armaf 100ml <strong>$79.000</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_657426-MLU72677135403_112023-O.webp" alt="Perfume 18"><p>Club de Nuit Sillage Armaf 100ml <strong>$77.000</strong> </p></div>
+    <div class="producto"><img src="https://www.atlanticoshop.com.py/image/cache/catalog/odyssey%20mega-100ml%20edp-800x800.webp" alt="Perfume 18"><p>Odyssey Mega Armaf 100ml <strong>$79.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/club-de-nuit-precieux-668881a9e882bc130517212339998938-1024-1024.webp" alt="Perfume 18"><p>Club de Nuit Precieux Armaf 55ml <strong>$99.500</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/002/708/808/products/arabe-71-2b91677e69644a7e8917232322610002-480-0.png" alt="Perfume 18"><p>Club de Nuit Oud Armaf 100ml <strong>$103.000</strong> </p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/odyssey-mandarine-sky-434b6da34f04e8516217257213255613-1024-1024.webp" alt="Perfume 18"><p>Odyssey Mandarin Sky Armaf 100ml <strong>$73.000</strong></p></div>
+    <div class="producto"><img src="https://multimarcasperfumes.cl/cdn/shop/files/odysseycandee100ml.png?v=1734982721" alt="Perfume 18"><p>Odyssey Candee 100ml <strong>$75.500</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_764333-MLA77461694673_072024-O.webp" alt="Perfume 18"><p>Odyssey Homme Armaf 100ml <strong>$89.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_770237-MLA80282081784_112024-O.webp" alt="Perfume 18"><p>Odyssey Limoni Fresh Armaf 100ml <strong>$73.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_824452-MLA82071447872_022025-O.webp" alt="Perfume 18"><p>Infinity Gold Armaf 105ml <strong>$97.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_801300-MLA72798773716_112023-O.webp" alt="Perfume 18"><p>Club De Nuit Urban Elixir Armaf 100ml <strong>$67.500</strong></p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_719912-MLA79554259582_102024-O.webp" alt="Perfume 18"><p>Amber Oud Dubai Night Al Haramain 100ml <strong>$97.000</strong> </p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/206/252/products/perfume-arabe-alharamai-gold-edition-meperfumeria-1-150e81e71ebcd67add17180330225180-1024-1024.png" alt="Perfume 18"><p>Amber Oud Gold Edition Al Haramain 120ml <strong>$92.500</strong></p></div>
+    <div class="producto"><img src="https://perfumeshop.com.ar/wp-content/uploads/2023/03/Amber-Oud-Bleu-Edition-Al-Haramain-Eau-de-Parfum-04.jpg" alt="Perfume 18"><p>Amber Oud Bleu Edition Al Haramain 100ml <strong>$99.000</strong> </p></div>
+    <div class="producto"><img src="https://tiendalafe.com/cdn/shop/files/Disenosintitulo-2024-06-13T144636.556.png?v=1718311609" alt="Perfume 18"><p>Amber Oud Ruby Edition Al Haramain 100ml <strong>$103.000</strong> </p></div>
+    <div class="producto"><img src="https://http2.mlstatic.com/D_NQ_NP_680694-MLA52223945019_102022-O.webp" alt="Perfume 18"><p>L'Aventure Knight Al Haramain 100ml <strong>$79.000</strong> </p></div>
+    <div class="producto"><img src="https://perfumeshop.com.ar/wp-content/uploads/2024/11/al-haramain-amber-oud-white-edition-edp-100ml_800x800.webp" alt="Perfume 18"><p>Amber Oud White Edition Al Haramain 100ml <strong>$99.000</strong></p></div>
+    <div class="producto"><img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/l-aventure-74cc227d28e13ef55317238393634701-640-0.webp" alt="Perfume 18"><p>L'Aventure Al Haramain 100ml <strong>$65.000</strong> </p></div>
+</section>
+    <footer>
+        <h2>Contacto</h2>
+        <p>Teléfonos:</p> +54 9 351 705 3252 (Facundo)
+                    <p>+54 9 351 679 4420 (Matias)</p>
+    </footer>
+1
+</body></html>
